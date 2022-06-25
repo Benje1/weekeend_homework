@@ -51,11 +51,16 @@ def find_pet_by_name(pet_list, pet_name):
             count = pet
     return count
 
+# def remove_pet_by_name(shop, pet_to_remove):
+#     # shop["pets"]["name"].pop(pet_to_remove)
+#     for pet in shop["pets"]:
+#         if pet["name"] == pet_to_remove:
+#             shop["pet"].remove(pet_to_remove)
+
 def remove_pet_by_name(shop, pet_to_remove):
-    # shop["pets"]["name"].pop(pet_to_remove)
-    for pet in shop["pets"]["name"]:
-        if pet == pet_to_remove:
-            shop["pets"].remove(pet_to_remove)
+    for pet in shop["pets"]:
+        if pet["name"] == pet_to_remove:
+            shop["pets"].remove(pet)
 
 
 def add_pet_to_stock(shop, new_pet):
