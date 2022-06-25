@@ -53,7 +53,7 @@ def find_pet_by_name(pet_list, pet_name):
 
 def remove_pet_by_name(shop, pet_to_remove):
     # shop["pets"]["name"].pop(pet_to_remove)
-    for pet in shop["pets"]:
+    for pet in shop["pets"]["name"]:
         if pet == pet_to_remove:
             shop["pets"].remove(pet_to_remove)
 
@@ -76,3 +76,6 @@ def get_customer_pet_count(customer):
     for pet in customer["pets"]:
         pet_count.appened(pet)
     return len(pet_count)
+
+def add_pet_to_customer(customer, new_pet):
+    customer["pets"].append(new_pet.copy())
