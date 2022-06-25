@@ -77,10 +77,10 @@ def remove_customer_cash(customer, fee):
 
 # for godsake remember that you are useing a list!!!!!!!
 def get_customer_pet_count(customer):
-    pet_count = []
+    pet_count = 0
     for pet in customer["pets"]:
-        pet_count.appened(pet)
-    return len(pet_count)
+        pet_count = pet
+    return pet_count
 
 def add_pet_to_customer(customer, new_pet):
-    customer["pets"].append(new_pet.copy())
+    customer["pets"] = new_pet.copy()
