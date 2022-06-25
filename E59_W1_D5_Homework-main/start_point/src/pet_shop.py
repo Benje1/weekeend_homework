@@ -68,3 +68,11 @@ def get_customer_cash(customer):
 
 def remove_customer_cash(customer, fee):
     customer["cash"] -= fee
+
+
+# for godsake remember that you are useing a list!!!!!!!
+def get_customer_pet_count(customer):
+    pet_count = []
+    for pet in customer["pets"]:
+        pet_count.appened(pet)
+    return len(pet_count)
