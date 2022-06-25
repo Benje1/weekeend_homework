@@ -65,3 +65,6 @@ def get_customer_cash(customer):
     money = 0
     money += customer["cash"]
     return money
+
+def remove_customer_cash(customer, fee):
+    customer["cash"] -= fee
