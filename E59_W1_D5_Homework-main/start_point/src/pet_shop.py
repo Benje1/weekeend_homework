@@ -61,4 +61,7 @@ def remove_pet_by_name(shop, pet_to_remove):
 def add_pet_to_stock(shop, new_pet):
     shop["pets"].append(new_pet.copy())
 
-
+def get_customer_cash(customer):
+    money = 0
+    money += customer["cash"]
+    return money
